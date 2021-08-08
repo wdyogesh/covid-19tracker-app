@@ -1,0 +1,14 @@
+<div class="jumbotron text-center bg-white">
+    <h1 class="display-4 text-center">Corona Covid 19 country Wise</h1>
+    <hr class="my-4">
+    <div class="mx-auto">
+      <div class="form-group col-5 mx-auto">
+        <label for="c">Select Country</label>
+        <Select name="" class="form-control" id="c"  #mySelect (change)="changeWebsite($event)">
+          <option *ngFor="let country of countries">{{ country }}</option>
+        </Select>
+      </div>
+      <app-dashboard-card [totalConfirmed]="totalConfirmed" [totalActive]="totalActive" [totalRecovred]="totalRecovred"
+        [totalDeath]="totalDeath"></app-dashboard-card> 
+    </div>
+  </div>
